@@ -102,24 +102,6 @@ $$\Delta \text{Masse} = \underbrace{(E_{12} - E_1) \times \bar{S}_1}_{\text{Effe
 
 ---
 
-## 5. Guide de Démarrage Rapide
-
-```bash
-# 1. Génération des flux mensuels SIRH
-python src/generate_sirh_snapshots.py
-
-# 2. Exécution du pipeline ETL (Chargement des 17 390 fiches dans la base SQL)
-python src/etl_pipeline.py
-
-# 3. Exécution du moteur de clôture & génération des graphiques
-python src/year_end_analyzer.py
-
-# 4. Compilation du rapport exécutif officiel en PDF
-python src/generate_pdf_report.py
-```
-
----
-
 ## Contact & Profil
 
 * **Auteur :** Jean-Yves Lorenzi KOUTSENE
