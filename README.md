@@ -1,4 +1,4 @@
-# 💼 Automated Headcount & Labor Cost Monitoring Pipeline (Global FMCG & Industrial Operations)
+# Automated Headcount & Labor Cost Monitoring Pipeline (Global FMCG & Industrial Operations)
 
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://python.org)
 [![SQL](https://img.shields.io/badge/Database-SQLite%20%7C%20Star%20Schema-green.svg)](https://sqlite.org)
@@ -12,7 +12,7 @@
 
 ---
 
-## 🎯 1. Contexte Métier & Problématique
+## 1. Contexte Métier & Problématique
 
 Dans la majorité des directions des ressources humaines et financières, le processus de clôture mensuelle et de fin d'année (*Year-End closure*) est ralenti par l'enfer des consolidations manuelles sous Excel (multiplication des classeurs mensuels du SIRH, risques d'erreurs de formules, lenteurs de traitement de 10 à 15 jours).
 
@@ -25,7 +25,7 @@ Ce projet met en place un **pipeline automatisé d'extraction et de structuratio
 
 ---
 
-## 📈 2. Visualisations Financières & Analyses de Clôture
+## 2. Visualisations Financières & Analyses de Clôture
 
 ### 1. Suivi Mensuel des Effectifs (Headcount vs ETP) & Turnover
 > *Comparaison mensuelle entre effectif physique et Équivalents Temps Plein (écart moyen de ~30 ETP reflétant les temps partiels), couplée au suivi du taux de rotation (turnover mensuel maîtrisé entre 0,6 % et 1,1 %).*
@@ -55,7 +55,7 @@ Ce projet met en place un **pipeline automatisé d'extraction et de structuratio
 
 ---
 
-## 📂 3. Architecture du Répertoire
+## 3. Architecture du Répertoire
 
 ```text
 ├── data/
@@ -84,7 +84,7 @@ Ce projet met en place un **pipeline automatisé d'extraction et de structuratio
 
 ---
 
-## 🔬 4. Modélisation SQL & Concepts Contrôle de Gestion
+## 4. Modélisation SQL & Concepts Contrôle de Gestion
 
 ### 1. Le Schéma Dimensionnel en Étoile (Star Schema)
 * **`fact_monthly_payroll` (17 390 enregistrements) :** Table de faits stockant pour chaque salarié et chaque mois : ETP, salaire de base réel, heures supplémentaires majorées, primes, cotisations patronales (42 %) et coût complet employeur.
@@ -102,7 +102,7 @@ $$\Delta \text{Masse} = \underbrace{(E_{12} - E_1) \times \bar{S}_1}_{\text{Effe
 
 ---
 
-## ⚡ 5. Guide de Démarrage Rapide
+## 5. Guide de Démarrage Rapide
 
 ```bash
 # 1. Génération des flux mensuels SIRH
@@ -120,14 +120,7 @@ python src/generate_pdf_report.py
 
 ---
 
-## 💼 6. Synthèse pour l'Entretien d'Embauche
-
-* **Le Pitch de 45 secondes :**  
-  > *« Ce projet répond au défi majeur des clôtures de fin d'année en contrôle de gestion sociale : remplacer les classeurs Excel manuels par un pipeline automatisé Python & SQL. J'ai modélisé une base relationnelle en étoile sous SQL capable d'ingérer plus de 17 000 fiches de paie mensuelles, de calculer automatiquement les ETP et le turnover, et de décomposer la variance budgétaire. J'ai notamment démontré l'impact de l'effet de Noria (-41,8 k€/mois), prouvant que le rajeunissement naturel des équipes compense en grande partie les hausses salariales annuelles. »*
-
----
-
-## 📬 Contact & Profil
+## Contact & Profil
 
 * **Auteur :** Jean-Yves Lorenzi KOUTSENE
 * **Formation :** Master Data Analytics / Informatique (EILCO Calais)
